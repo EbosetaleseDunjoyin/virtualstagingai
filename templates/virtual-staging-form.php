@@ -34,11 +34,11 @@
             <div class="my-3">
                 <select class="form-select" aria-label="Default select example" name="style" required>
                     <option value="">Style (The desired style of furnishing. Must be one of the following)</option>
-                    <option value="standard">Standard</option>
+                    <option value="standard">Standard (Best Results)</option>
                     <option value="modern">Modern</option>
                     <option value="scandinavian">Scandinavian</option>
                     <option value="industrial">Industrial</option>
-                    <option value="mid-century-modern">Mid-century modern</option>
+                    <option value="mid-century">Mid-century</option>
                     <option value="coastal">Coastal</option>
                     <option value="american">American</option>
                     <option value="southwestern">Southwestern</option>
@@ -213,8 +213,8 @@
             const apiUrl = `https://api.virtualstagingai.app/v1/render/create?${queryParams}`;
             const pingUrl = 'https://api.virtualstagingai.app/v1/ping';
 
-            xhr.open('POST',  apiUrl, true);
-            // xhr.open('POST', proxyUrl + apiUrl, true);
+            // xhr.open('POST',  apiUrl, true);
+            xhr.open('POST', proxyUrl + apiUrl, true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
             xhr.setRequestHeader('Authorization', 'Api-key vsai-pk-f71d129a-be49-4d49-bf32-39a0e74420d3');
