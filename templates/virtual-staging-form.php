@@ -118,6 +118,7 @@
                          </div>
                     `
                 }
+
                 // aiImages.forEach(image => {
                 //     content += `
                 //          <div class="col-lg-4 col-md-6 col-12">
@@ -212,7 +213,8 @@
             const apiUrl = `https://api.virtualstagingai.app/v1/render/create?${queryParams}`;
             const pingUrl = 'https://api.virtualstagingai.app/v1/ping';
 
-            xhr.open('POST', proxyUrl + apiUrl, true);
+            xhr.open('POST',  apiUrl, true);
+            // xhr.open('POST', proxyUrl + apiUrl, true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
             xhr.setRequestHeader('Authorization', 'Api-key vsai-pk-f71d129a-be49-4d49-bf32-39a0e74420d3');
