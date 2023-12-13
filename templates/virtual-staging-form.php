@@ -49,13 +49,13 @@
             <div class="my-3">
                 <p class="mb-0" >Resolution</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" value="4k" name="resolution" id="flexRadioDefault1" >
+                    <input class="form-check-input" type="radio" value="4k" name="resolution" id="flexRadioDefault1" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                         4k
                     </label>
                     </div>
                     <div class="form-check">
-                    <input class="form-check-input" type="radio" value="full-hd" name="resolution" id="flexRadioDefault2" checked>
+                    <input class="form-check-input" type="radio" value="full-hd" name="resolution" id="flexRadioDefault2" >
                     <label class="form-check-label" for="flexRadioDefault2">
                         Full-HD
                     </label>
