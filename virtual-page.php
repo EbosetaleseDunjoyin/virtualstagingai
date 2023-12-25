@@ -6,7 +6,6 @@
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Wordpress
- * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Update URI:        https://example.com/my-plugin/
  * Text Domain:       virtual-staging-ai
@@ -53,24 +52,24 @@ if (!class_exists('VirtualStage')) {
         }
 
         public function register_styles_scripts(){
-            $nonce = wp_create_nonce('wp_rest');
-            wp_enqueue_style('bootstrap_css', "//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css", [], 1.1, "all");
-            wp_enqueue_style('bootstrap_icons', "//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css", [], 1.1, "all");
-            wp_enqueue_style('plugin_style_index', VIRTUAL_ASSETS_URL . '/style.css', [], filemtime(VIRTUAL_ASSETS . '/style.css'), 'all');
-            wp_enqueue_style('simply_style', "//cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css", [], 1.1, "all");
-            wp_enqueue_style('magnific_style', VIRTUAL_ASSETS_URL . '/magnific.css', [], filemtime(VIRTUAL_ASSETS . '/magnific.css'), 'all');
+            // $nonce = wp_create_nonce('wp_rest');
+            wp_enqueue_style('virtual_staging_ai_bootstrap_css', "//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css", [], 1.1, "all");
+            wp_enqueue_style('virtual_staging_ai_bootstrap_icons', "//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css", [], 1.1, "all");
+            wp_enqueue_style('virtual_staging_ai_plugin_style_index', VIRTUAL_ASSETS_URL . '/style.css', [], filemtime(VIRTUAL_ASSETS . '/style.css'), 'all');
+            wp_enqueue_style('virtual_staging_ai_simply_style', "//cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.css", [], 1.1, "all");
+            wp_enqueue_style('virtual_staging_ai_magnific_style', VIRTUAL_ASSETS_URL . '/magnific.css', [], filemtime(VIRTUAL_ASSETS . '/magnific.css'), 'all');
 
-            wp_enqueue_script('jquery_cdn', "//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js", [], 1.1, true);
-            wp_enqueue_script('bootstrap_pooper', "//cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js", [], 1.1, true);
-            wp_enqueue_script('bootstrap_js', "//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js", [], 1.1, true);
-            wp_enqueue_script('simply_js', "//cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js", [], 1.1, true);
-            wp_enqueue_script('theme_script_magnific_min', VIRTUAL_ASSETS_URL . '/magnific.min.js', ['jquery_cdn'], filemtime(VIRTUAL_ASSETS . '/magnific.min.js'), true);
-            wp_enqueue_script('plugin_script_form', VIRTUAL_ASSETS_URL . '/main.js', ['jquery_cdn'], filemtime(VIRTUAL_ASSETS . '/main.js'), true);
-            wp_localize_script('plugin_script_form', 'wpApiSettings', array(
-                'root' => esc_url_raw(rest_url()),
-                'nonce' => $nonce,
-                'user' => wp_get_current_user()
-            ));
+            // wp_enqueue_script('jquery_cdn', "//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js", [], 1.1, true);
+            wp_enqueue_script('virtual_staging_ai_bootstrap_pooper', "//cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js", [], 1.1, true);
+            wp_enqueue_script('virtual_staging_ai_bootstrap_js', "//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js", [], 1.1, true);
+            wp_enqueue_script('virtual_staging_ai_simply_js', "//cdn.jsdelivr.net/npm/simple-notify@0.5.5/dist/simple-notify.min.js", [], 1.1, true);
+            wp_enqueue_script('virtual_staging_ai_theme_script_magnific_min', VIRTUAL_ASSETS_URL . '/magnific.min.js', [], filemtime(VIRTUAL_ASSETS . '/magnific.min.js'), true);
+            wp_enqueue_script('virtual_staging_ai_plugin_script_form', VIRTUAL_ASSETS_URL . '/main.js', [], filemtime(VIRTUAL_ASSETS . '/main.js'), true);
+            // wp_localize_script('plugin_script_form', 'wpApiSettings', array(
+            //     'root' => esc_url_raw(rest_url()),
+            //     'nonce' => $nonce,
+            //     'user' => wp_get_current_user()
+            // ));
         
         }
 
