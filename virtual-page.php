@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       Virtual Stageing AI
  * Description:       Handle the basics with this plugin.
- * Version:           1.0
+ * Version:           1.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Wordpress
